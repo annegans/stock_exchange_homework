@@ -1,13 +1,18 @@
 class Brokerage
 
-  def intialize(options = {})
-    @clients = options[:clients] || []
-    @name = options[:name]
-  end 
-  
-def list_clients
+attr_accessor :name, :clients
 
-end 
+  def initialize(options = {}) 
+    @name = options[:name]
+    @clients = options[:clients] || []
+  end 
+
+  def list_clients
+  @clients.each { |client| puts " client = #{no_of_shares}, balance = #{ }" }
+  end  
+
+end
+
 
 
 
